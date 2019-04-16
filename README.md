@@ -9,4 +9,4 @@
 * `counselor page` - access assigned patient(s) information and forms (landing page after logging in?)
 * `patient page`   - veiw patient information and contracts
 * `form pages`     - forms like contracts, questionaires, etc.
-*Possibly a calender/planner, but this idea is more of a back seat*
+* *Possibly a calender/planner, but this idea is more of a back seat*
