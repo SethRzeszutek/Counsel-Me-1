@@ -1,5 +1,4 @@
 FROM python:3.7-alpine
-MAINTAINER A Goody
 
 ENV PYTHONUNBUFFERED 1
 
@@ -17,5 +16,5 @@ RUN mkdir /counselMe
 WORKDIR /counselMe
 COPY ./counselMe/ /counselMe
 
-RUN adduser -D aaron
-USER aaron
+RUN adduser -D admin
+USER admin
