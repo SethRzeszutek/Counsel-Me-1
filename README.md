@@ -3,7 +3,7 @@
 *Using Python, Django, and Docker*
 
 
-## Main Veiws:
+## Main Views:
 * `login page`     - simple login page
 * `user page`      - user landing pages depending on security level
 	* `admin page`     - manages counselor access to patients as well as other settings
