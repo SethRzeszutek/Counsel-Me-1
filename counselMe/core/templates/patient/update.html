@@ -1,0 +1,22 @@
+{% block title %}Update Patient{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-12 col-md-offset-4 col-md-4">
+    <h2 class="text-center">Update Patient: {{patient.name}}</h2>
+    <a class="btn btn-default" role="button" href="{% url 'core:patient_detail' pk=patient.id %}">Back to Details</a>
+    <br><br>
+    <form action="{% url 'core:patient_update' pk=patient.id %}" class="form" method="post">
+        {% csrf_token %}
+        <table class="table">
+        {{ form.as_table }}
+      </table>
+      <button class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

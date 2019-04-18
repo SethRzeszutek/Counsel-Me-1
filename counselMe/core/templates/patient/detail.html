@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Patient Details
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-12 col-md-offset-2 col-md-8">
+    <h3 class="text-center">Patient Details</h3>
+    <a class="btn btn-default" role="button" href="{% url 'core:patient_index' %}">Back to Patient Index</a>
+    <a class="btn btn-primary float-right" role="button" href="{% url 'core:patient_delete' pk=patient.id %}">Delete</a>
+    <a class="btn btn-primary float-right" role="button" href="{% url 'core:patient_update' pk=patient.id %}">Update</a>
+    
+    
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <table style="font-size:20px">
+          <tbody>
+            <tr>   
+              <td><b>Name:</b></td> 
+              <td>{{patient.name}}</td>
+            </tr>
+            <tr>   
+              <td><b>Address:</b></td> 
+              <td>{{patient.address}}</td>
+            </tr>
+            <tr>   
+              <td><b>Insurance:</b></td> 
+              <td>{{patient.insurance}}</td>
+            </tr>
+            <tr>   
+              <td><b>Fave Animal:</b></td> 
+              <td>{{patient.get_favorite_animal_display}}</td>
+            </tr>
+            <tr>   
+                <td><b>Created on:</b></td> 
+                <td>{{patient.created_ts}}</td>
+            </tr>
+                <tr>   
+                <td><b>Created by:</b></td> 
+                <td>{{patient.created_by}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endblock %}

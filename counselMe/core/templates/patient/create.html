@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Create Patient
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-12 col-md-offset-2 col-md-8">
+    <h2 class="text-center">Create New Patient</h2>
+    <a class="btn btn-default" role="button" href="{% url 'core:patient_index' %}">Back to Patient Index</a>
+    <br><br>
+    <form action="{% url 'core:patient_create' %}" class="form" method="post">
+        {% csrf_token %}
+        <table class="table">
+          {{form.as_table}}
+        </table>
+        <button class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</div>
+    
+{% endblock content %}

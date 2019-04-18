@@ -1,0 +1,20 @@
+{% block title %}Delete Patient{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-12 col-md-offset-4 col-md-4">
+    <h2 class="text-center">Delete {{patient.name}}</h2>
+    <a class="btn btn-default" role="button" href="{% url 'core:patient_detail' pk=patient.id %}">Back to Details</a>
+    <hr>
+    <form action="{% url 'core:patient_delete' pk=patient.id %}" class="form" method="post">
+        {% csrf_token %}
+        Please Confirm <br><br>
+          <div class="col-xs-6" ><button class="btn btn-warning" style="float:right;">Delete</button></div>
+        </div>
+        
+        
+    </form>
+  </div>
+</div>
+
+{% endblock %}
