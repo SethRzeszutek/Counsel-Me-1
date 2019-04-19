@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>{% block title %}Counsel Me{% endblock %}</title>
+	<title>{% block title %}{{project_name}}{% endblock %}</title>
 	{% block styles %}
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	{% load staticfiles %}
@@ -12,7 +12,7 @@
 
 <body style="background-color: white;">
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">CounselMe</a>
+		<a class="navbar-brand" href="#">{{project_name}}</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>

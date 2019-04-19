@@ -9,26 +9,29 @@ from .forms import PatientCreateForm
 
 from .models import Patient
 
+PROJECT_NAME = "CounselMe"
+
 def login(request):
-	x='hello world'
 	if request.method == 'GET':
-		return render(request, 'login.html', {'look_at_me': x})
+		return render(request, 'login.html', {'project_name': PROJECT_NAME})
 
 def home(request):
 	if request.method == 'GET':
-		return render(request, 'home.html')
+		return render(request, 'home.html', {'project_name': PROJECT_NAME})
 
 def forms(request):
 	if request.method == 'GET':
-		return render(request, 'forms.html')
+		return render(request, 'forms.html', {'project_name': PROJECT_NAME})
 
 def planner(request):
 	if request.method == 'GET':
-		return render(request, 'planner.html')
+		return render(request, 'planner.html', {'project_name': PROJECT_NAME})
 class PatientList(ListView):
 	model = Patient
 	template_name = 'patient/index.html'
 	context_object_name = 'patients'
+	def getProjectName(): ###I DONT THINK THIS WORKS BUT KEEPING IT HERE TO SHOW YOU
+		return PROJECT_NAME
 
 class PatientDetail(DetailView):
 	model = Patient
