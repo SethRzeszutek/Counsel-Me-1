@@ -4,10 +4,27 @@
 
 
 ## Main Views:
-* `login page`     - simple login page
-* `user page`      - user landing pages depending on security level
-	* `admin page`     - manages counselor access to patients as well as other settings
-	* `counselor page` - access assigned patient(s) information and forms (landing page after logging in?)
-* `patient page`   - view patient information and contracts
-* `form pages`     - forms like contracts, questionaires, etc.
-* *Possibly a calender/planner, but this idea is more of a back seat* (Really think we should add this now.)
+* `login page` - simple login page
+	* [x] Styling is functional
+	* [ ] Account authentication
+* `user home page` - both an admin and counseler landing page
+	* [x] Styling
+	* [ ] The admin page manages counselor access to patients as well as other settings
+	* [ ] The counselor page allows access to assigned patient(s) information and forms (landing page after logging in?)
+* `patient page` - view patient information and contracts
+	* `patient index page` - view all patients
+		* [x] Styling
+		* [x] Select and View
+	* `patient create page` - create patient
+		* [x] Styling
+		* [x] Save Patient
+	* `patient detail page` - view patient details
+		* [x] Delete
+		* [ ] Edit (Works, but not in a modal)
+* `form pages` - forms like contracts, questionaires, etc.
+	* [ ] Styling
+	* [ ] Multiple forms that you can 'attach' to the patient object
+* `planner page` - a planner/caleneder page
+	* [ ] Styling
+	* [ ] Calender/Planner
+
