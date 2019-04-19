@@ -17,6 +17,14 @@ def login(request):
 def home(request):
 	if request.method == 'GET':
 		return render(request, 'home.html')
+
+def forms(request):
+	if request.method == 'GET':
+		return render(request, 'forms.html')
+
+def planner(request):
+	if request.method == 'GET':
+		return render(request, 'planner.html')
 class PatientList(ListView):
 	model = Patient
 	template_name = 'patient/index.html'
