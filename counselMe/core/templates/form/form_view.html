@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+	form Details
+{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+	<div class="col">
+		<h3 class="text-center">form Details</h3>
+		<a class="btn btn-secondary float-left" role="button" href="{% url 'core:forms' %}">< Back</a>
+		<div class="float-right">
+			{% comment %} <a class="btn btn-primary float-right" role="button" href="{% url 'core:form_delete' pk=form.id %}">Delete</a> {% endcomment %}
+			<button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+			
+			{% comment %}<a class="btn btn-primary float-right" role="button" href="{% url 'core:form_update' pk=form.id %}">Update</a>{% endcomment %}
+			<button class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Update</button>
+		</div>
+		<br>
+		<br>
+		<hr>
+		<div class="row">
+			<div class="col">
+				<table class="col" style="font-size:20px">
+					<tbody>
+					<tr>
+						<td><b>Name:</b></td> 
+						<td>{{form.name}}</td>
+					</tr>
+					<tr>
+						<td><b>Address:</b></td> 
+						<td>{{form.address}}</td>
+					</tr>
+					<tr>
+						<td><b>Insurance:</b></td> 
+						<td>{{form.insurance}}</td>
+					</tr>
+					<tr>
+						<td><b>Choice:</b></td> 
+						<td>{{form.choice}}</td>
+					</tr>
+					<tr>
+						<td><b>Created on:</b></td> 
+						<td>{{form.created_ts}}</td>
+					</tr>
+						<tr>
+						<td><b>Created by:</b></td> 
+						<td>{{form.created_by}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'form/form_delete.html' %}
+{% include 'form/form_update.html' %}
+{% endblock %}
+

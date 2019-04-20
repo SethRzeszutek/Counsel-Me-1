@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Form List
+{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+	<div class="col">
+		<h2 class="text-center">Form Index</h2>
+		<a class="btn btn-primary" role="button" href="{% url 'core:form_create' %}">Create Form</a>
+		<hr>
+			<h4 class="text-center"><b>Form Table</b></h4> 
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Insurance</th>
+						<th>Choice</th>
+						<th>Created on</th>
+						<th>Created by</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for form in forms %}
+					<tr>
+						<td><a href="{% url 'core:form_view' pk=form.id %}">{{form.name}}</a></td>
+						<td>{{form.address}}</td>
+						<td>{{form.insurance}}</td>
+						<td>{{form.choice}}</td>
+						<td>{{form.created_ts}}</td>
+						<td>{{form.created_by}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</hr>
+	</div>
+</div>
+{% endblock %}

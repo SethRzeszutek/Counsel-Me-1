@@ -6,8 +6,10 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 
 from .forms import PatientCreateForm
+from .forms import FormCreateForm
 
 from .models import Patient
+from .models import Form
 
 PROJECT_NAME = "CounselMe"
 
@@ -58,3 +60,35 @@ class PatientDelete(DeleteView):
 	success_url = reverse_lazy('core:patient_index')
 	template_name = 'patient/delete.html'
 	context_object_name = 'patient'
+
+
+
+class FormList(ListView):
+	model = Form
+	template_name = 'form/form_index.html'
+	context_object_name = 'forms'
+
+class FormCreate(CreateView):
+	model = Form
+	success_url = reverse_lazy('core:form_index')
+	form_class = FormCreateForm
+	template_name = 'form/form_create.html'
+	context_object_name = 'form'
+
+class FormView(DetailView):
+	model = Form
+	template_name = "form/form_view.html"
+	context_object_name = 'form'
+
+class FormUpdate(UpdateView):
+	model = Form
+	success_url = reverse_lazy('core:form_index')
+	fields = ['name', 'address', 'choice', 'insurance',]
+	template_name = 'form/form_update.html'
+	context_object_name = 'form'
+
+class FormDelete(DeleteView):
+	model = Form
+	success_url = reverse_lazy('core:form_index')
+	template_name = 'form/form_delete.html'
+	context_object_name = 'form'

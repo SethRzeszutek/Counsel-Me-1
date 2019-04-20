@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Create form
+{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+	<div class="col">
+		<h2 class="text-center">Create New Form</h2>
+		<a class="btn btn-secondary float-left" role="button" href="{% url 'core:form_index' %}">< Back</a>
+		<br><br>
+		<form action="{% url 'core:form_create' %}" class="form" method="post">
+			{% csrf_token %}
+			<table class="table">
+				{{form.as_table}}
+			</table>
+			<button class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
+{% endblock content %}
