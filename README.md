@@ -29,4 +29,4 @@
 	* [ ] Calender/Planner
 
 ## Probably Messed Up Planning Graph Thing
-	![Some sort of Planning](https://i.imgur.com/M0EZe2c.png)
+![Some sort of Planning](https://i.imgur.com/M0EZe2c.png)
