@@ -28,5 +28,5 @@
 	* [ ] Styling
 	* [ ] Calender/Planner
 
-##Probably Messed Up Planning Graph Thing
+## Probably Messed Up Planning Graph Thing
 	![Some sort of Planning](https://i.imgur.com/M0EZe2c.png)
