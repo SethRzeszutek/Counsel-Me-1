@@ -30,8 +30,9 @@ class PatientList(ListView):
 	model = Patient
 	template_name = 'patient/index.html'
 	context_object_name = 'patients'
-	def getProjectName(): ###I DONT THINK THIS WORKS BUT KEEPING IT HERE TO SHOW YOU
-		return PROJECT_NAME
+	project_name = PROJECT_NAME
+	def __str__(self):
+		return self.project_name
 
 class PatientDetail(DetailView):
 	model = Patient
