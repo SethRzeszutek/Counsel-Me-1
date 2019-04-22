@@ -36,29 +36,29 @@ class PatientList(ListView):
 	def __str__(self):
 		return self.project_name
 
-class PatientDetail(DetailView):
+class PatientView(DetailView):
 	model = Patient
-	template_name = "patient/detail.html"
+	template_name = "patient/patient_view.html"
 	context_object_name = 'patient'
 
 class PatientCreate(CreateView):
 	model = Patient
 	success_url = reverse_lazy('core:patient_index')
 	form_class = PatientCreateForm
-	template_name = 'patient/create.html'
+	template_name = 'patient/patient_create.html'
 	context_object_name = 'patient'
 
-class PatientUpdate(UpdateView):
+class PatientEdit(UpdateView):
 	model = Patient
 	success_url = reverse_lazy('core:patient_index')
 	fields = ['name', 'address', 'favorite_animal', 'insurance',]
-	template_name = 'patient/update.html'
+	template_name = 'patient/patient_edit.html'
 	context_object_name = 'patient'
 
 class PatientDelete(DeleteView):
 	model = Patient
 	success_url = reverse_lazy('core:patient_index')
-	template_name = 'patient/delete.html'
+	template_name = 'patient/patient_delete.html'
 	context_object_name = 'patient'
 
 
@@ -80,11 +80,11 @@ class FormView(DetailView):
 	template_name = "form/form_view.html"
 	context_object_name = 'form'
 
-class FormUpdate(UpdateView):
+class FormEdit(UpdateView):
 	model = Form
 	success_url = reverse_lazy('core:form_index')
 	fields = ['name', 'address', 'choice', 'insurance',]
-	template_name = 'form/form_update.html'
+	template_name = 'form/form_edit.html'
 	context_object_name = 'form'
 
 class FormDelete(DeleteView):

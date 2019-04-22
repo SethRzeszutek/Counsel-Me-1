@@ -7,7 +7,7 @@
 <div class="row text-center">
 	<div class="col">
 		<h3 class="text-center">form Details</h3>
-		<a class="btn btn-secondary float-left" role="button" href="{% url 'core:forms' %}">< Back</a>
+		<a class="btn btn-secondary float-left" role="button" href="{% url 'core:form_index' %}">< Back</a>
 		<div class="float-right">
 			{% comment %} <a class="btn btn-primary float-right" role="button" href="{% url 'core:form_delete' pk=form.id %}">Delete</a> {% endcomment %}
 			<button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
