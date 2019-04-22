@@ -30,7 +30,7 @@ def planner(request):
 		return render(request, 'planner.html', {'project_name': PROJECT_NAME})
 class PatientList(ListView):
 	model = Patient
-	template_name = 'patient/index.html'
+	template_name = 'patient/patient_index.html'
 	context_object_name = 'patients'
 	project_name = PROJECT_NAME
 	def __str__(self):

@@ -10,7 +10,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-					<form action="{% url 'core:form_update' pk=form.id %}" class="form" method="post">
+					<form action="{% url 'core:form_edit' pk=form.id %}" class="form" method="post">
 						{% csrf_token %}
 						<table class="table">
 							{{ form.as_table }}
