@@ -30,3 +30,15 @@
 
 ## Probably Messed Up Planning Graph Thing
 ![Some sort of Planning](https://i.imgur.com/M0EZe2c.png)
+
+##Questions:
+* How do we handle forms?
+	* User created?
+		* https://github.com/stephenmcd/django-forms-builder
+		* https://github.com/barseghyanartur/django-fobi
+		* MORE: https://djangopackages.org/grids/g/form-builder/
+	* Temporarily Hardcoded?
+		* Downside is someone would need to contact us to make changes...
+	* Just allow document attachments to customers rather than online form?
+		* Possibly still need that as an option.
+	* If we go strictly online, then we need a "signing spot" or electronic signature.
