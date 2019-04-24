@@ -22,7 +22,7 @@
 					</a>
 				</div>
 			{% for form in forms %}
-			<div class="col-sm-3 bottom-margin">
+			<div class="col-sm-3 bottom-padding">
 				<div class="card form-card text-center">
 					<div class="card-header">
 						<h4 class="card-title"><a href="{% url 'core:form_view' pk=form.id %}">{{form.name}}</a></h4>
