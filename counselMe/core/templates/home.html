@@ -2,10 +2,15 @@
 
 {% block content %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-	<h1 class="display-4">Welcome to {{project_name}}</h1>
-	<p class="lead">This is a simple patient and content manager to allow counselors to safely access and store their information.</p>
-	<hr class="my-4">
-	<p>It was built using Django.</p>
-</div>
+{% if user.is_authenticated %}
+	<div class="jumbotron">
+		<h1 class="display-4">Welcome to {{project_name}}</h1>
+		<p class="lead">This is a simple patient and content manager to allow counselors to safely access and store their information.</p>
+		<hr class="my-4">
+		<p>Hello {{ user.username }}!</p>
+	</div>
+{% else %}
+	<p>You are not logged in</p>
+	<a href="{% url 'login' %}">login</a>
+{% endif %}
 {% endblock %}
