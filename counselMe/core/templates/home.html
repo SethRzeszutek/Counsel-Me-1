@@ -4,13 +4,18 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 {% if user.is_authenticated %}
 	<div class="jumbotron">
-		<h1 class="display-4">Welcome to {{project_name}}</h1>
+		<h1 class="display-4">Welcome to CounselMe</h1>
 		<p class="lead">This is a simple patient and content manager to allow counselors to safely access and store their information.</p>
 		<hr class="my-4">
 		<p>Hello {{ user.username }}!</p>
 	</div>
 {% else %}
-	<p>You are not logged in</p>
-	<a href="{% url 'login' %}">login</a>
+	<div class="jumbotron">
+		<h1 class="display-4">You are not logged in.</h1>
+	</div>
+	<br>
+	<div class="text-center">
+		<a class="btn btn-outline-dark" href="{% url 'core:login' %}">Login</a>
+	</div>
 {% endif %}
 {% endblock %}
