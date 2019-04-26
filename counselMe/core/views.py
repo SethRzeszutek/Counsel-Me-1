@@ -15,7 +15,11 @@ PROJECT_NAME = "CounselMe"
 
 def login(request):
 	if request.method == 'GET':
-		return render(request, 'login.html', {'project_name': PROJECT_NAME})
+		return render(request, 'registration/login.html', {'project_name': PROJECT_NAME})
+
+def landing(request):
+	if request.method == 'GET':
+		return render(request, 'landing.html', {'project_name': PROJECT_NAME})
 
 def home(request):
 	if request.method == 'GET':
