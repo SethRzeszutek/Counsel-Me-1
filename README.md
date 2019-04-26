@@ -6,7 +6,9 @@
 ## Main Views:
 * `login page` - simple login page
 	* [x] Styling is functional
-	* [ ] Account authentication
+	* [x] Account authentication
+	* [ ] Different types of users(admin and user)
+	* [ ] Better way to add users
 * `user home page` - both an admin and counseler landing page
 	* [x] Styling
 	* [ ] The admin page manages counselor access to patients as well as other settings
