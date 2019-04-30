@@ -45,3 +45,7 @@
 	* Just allow document attachments to customers rather than online form?
 		* Possibly still need that as an option.
 	* If we go strictly online, then we need a "signing spot" or electronic signature.
+
+## References:
+* HIPPA Compliance:
+	* https://devops.com/make-software-hipaa-compliant/
