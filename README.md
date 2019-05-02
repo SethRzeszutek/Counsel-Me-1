@@ -48,4 +48,6 @@
 
 ## References:
 * HIPPA Compliance:
-	* https://devops.com/make-software-hipaa-compliant/
+	* [Reference](https://devops.com/make-software-hipaa-compliant/)
+* Users:
+	* [Reference](https://www.geeksforgeeks.org/python-user-groups-custom-permissions-django/)
