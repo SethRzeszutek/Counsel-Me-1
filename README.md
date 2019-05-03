@@ -2,7 +2,11 @@
 ### A simple app for accessing and managing patient information
 *Using Python, Django, and Docker*
 
-*Before logging in you must enter the container shell and create a super user with `python3 manage.py createsuperuser`*
+## Steps to Remember
+* If you changed any fields that would be stored in the data base you will need to manually fix it or just start a new database
+* When starting a new database
+	* Before logging in you must enter the container shell and create a super user with `python3 manage.py createsuperuser`
+	* I usually use `admin` and `admin` as username and password
 
 ## Main Views:
 * `login page` - simple login page
