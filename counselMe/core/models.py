@@ -7,6 +7,7 @@ class Patient(models.Model):
 		('d','Dog'),
 		('c','Cat'),
 	)
+	#first name, last name, street, city, state, zip, insurance,
 	name = models.CharField(max_length=100)
 	address = models.CharField(max_length=100, null=True, blank=True)
 	insurance = models.CharField(max_length=100, null=True, blank=True)

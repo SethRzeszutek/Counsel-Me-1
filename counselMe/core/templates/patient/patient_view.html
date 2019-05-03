@@ -18,7 +18,19 @@
 		<br>
 		<br>
 		<hr>
-		<div class="row">
+		<div class="card mx-auto" style="width: 80vw;">
+			<div class="card-body">
+			<h5 class="card-title">{{patient.name}}</h5>
+			<h6 class="card-subtitle mb-2 text-muted">-{{patient.created_by}} at {{patient.created_by}}</h6>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Address: {{patient.address}}</li>
+				<li class="list-group-item">Insurance: {{patient.insurance}}</li>
+				<li class="list-group-item">Favorite Animal: {{patient.get_favorite_animal_display}}</li>
+			</ul>
+		</div>
+
+		{% comment %} <div class="row">
 			<div class="col">
 				<table class="col" style="font-size:20px">
 					<tbody>
@@ -49,7 +61,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</div> {% endcomment %}
 	</div>
 </div>
 {% include 'patient/patient_delete.html' %}
