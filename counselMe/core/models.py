@@ -8,8 +8,13 @@ class Patient(models.Model):
 		('c','Cat'),
 	)
 	#first name, last name, street, city, state, zip, insurance,
-	name = models.CharField(max_length=100)
-	address = models.CharField(max_length=100, null=True, blank=True)
+	fname = models.CharField(max_length=100)
+	lname = models.CharField(max_length=100)
+	street = models.CharField(max_length=100, null=True, blank=True)
+	city = models.CharField(max_length=100, null=True, blank=True)
+	state = models.CharField(max_length=100, null=True, blank=True)
+	zipcode = models.CharField(max_length=100, null=True, blank=True)
+
 	insurance = models.CharField(max_length=100, null=True, blank=True)
 	favorite_animal = models.CharField(max_length=1, choices=ANIMAL_CHOICES, default='d')
 	created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)

@@ -6,8 +6,12 @@ class PatientCreateForm(forms.ModelForm):
 	class Meta:
 		model = Patient
 		fields = [
-			'name',
-			'address',
+			'fname',
+			'lname',
+			'street',
+			'city',
+			'state',
+			'zipcode',
 			'insurance',
 			'favorite_animal',
 		]

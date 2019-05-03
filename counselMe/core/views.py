@@ -55,7 +55,7 @@ class PatientCreate(CreateView):
 class PatientEdit(UpdateView):
 	model = Patient
 	success_url = reverse_lazy('core:patient_index')
-	fields = ['name', 'address', 'favorite_animal', 'insurance',]
+	fields = ['fname','lname','street','city','state','zipcode','favorite_animal', 'insurance',]
 	template_name = 'patient/patient_edit.html'
 	context_object_name = 'patient'
 

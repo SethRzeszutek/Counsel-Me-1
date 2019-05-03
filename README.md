@@ -2,6 +2,7 @@
 ### A simple app for accessing and managing patient information
 *Using Python, Django, and Docker*
 
+*Before logging in you must enter the container shell and create a super user with `python3 manage.py createsuperuser`*
 
 ## Main Views:
 * `login page` - simple login page
