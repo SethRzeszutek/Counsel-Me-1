@@ -29,7 +29,7 @@
 				<tbody>
 					{% for patient in patients %}
 					<tr>
-						<td><a href="{% url 'core:patient_view' pk=patient.id %}">{{patient.name}} {{patient.name}}</a></td>
+						<td><a href="{% url 'core:patient_view' pk=patient.id %}">{{patient.fname}} {{patient.lname}}</a></td>
 						<td>{{patient.street}}</td>
 						<td>{{patient.city}}</td>
 						<td>{{patient.state}}</td>
