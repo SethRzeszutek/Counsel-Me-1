@@ -11,6 +11,9 @@ from .forms import FormCreateForm
 from .models import Patient
 from .models import Form
 
+from .models import Document
+from .forms import DocumentForm
+
 PROJECT_NAME = "CounselMe"
 
 def login(request):
@@ -32,6 +35,30 @@ def forms(request):
 def planner(request):
 	if request.method == 'GET':
 		return render(request, 'planner.html', {'project_name': PROJECT_NAME})
+
+def document(request):
+	if request.method == "POST":
+		form = DocumentForm(request.POST, request.FILES)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	else:
+		form = DocumentForm()
+	return render(request, 'model_upload.html', {
+		'form': form
+	})
+ 
+
+
+
+
+
+
+
+
+
+
+
 class PatientList(ListView):
 	model = Patient
 	template_name = 'patient/patient_index.html'

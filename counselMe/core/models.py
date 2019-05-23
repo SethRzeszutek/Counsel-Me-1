@@ -21,7 +21,7 @@ class Patient(models.Model):
 	created_ts = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return self.name
+		return self.fname
 
 class Form(models.Model):
 	FORM_CHOICES = (
@@ -39,3 +39,9 @@ class Form(models.Model):
 	def __str__(self):
 		return self.name
 
+class Document(models.Model):
+	title = models.CharField(max_length=100, blank=True)
+	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='uploaded_document')
+	upload_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='uploaded_documents')
+	datestamp = models.DateTimeField(auto_now_add=True)
+	document = models.FileField(upload_to='documents/')

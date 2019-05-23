@@ -1,6 +1,7 @@
 from django import forms
 from .models import Patient
 from .models import Form
+from .models import Document
 
 class PatientCreateForm(forms.ModelForm):
 	class Meta:
@@ -35,3 +36,8 @@ class FormCreateForm(forms.ModelForm):
 		# do standard checks
 		valid = super(FormCreateForm,self).is_valid()
 		return valid
+
+class DocumentForm(forms.ModelForm):
+	class Meta:
+		model = Document
+		fields = ('title', 'document', )
